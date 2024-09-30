@@ -23,17 +23,19 @@ def diagonalDifference(arr):
         # print(n)
         item=0
         for num in arr[row]:
-            print('item',num,'longiutd', len(arr)-item)          
+            # print('item',num,'longiutd', len(arr)-item)          
             if item==row:
                 diag=diag+arr[row][row]
+            if (item+row)==(len(arr)-1):
+                diag2=diag2+arr[row][item]
+            item=item+1  
         row=row+1 
-        for num in arr[row]:          
-            if item==row+len(arr)-aux:                
-                diag2=diag2+arr[row][len(arr)-aux-1]
-                print (diag2,arr[row][len(arr)-aux])
-                aux=aux-1
-            item=item+1
-         
+        # for num in arr[row]:          
+        #     if item==row+len(arr)-aux:                
+        #         diag2=diag2+arr[row][len(arr)-aux-1]
+        #         print (diag2,arr[row][len(arr)-aux])
+        #         aux=aux-1
+             
     result=abs(diag-diag2)
     print(result)
     print(diag,diag2)
