@@ -40,7 +40,7 @@ def diagonalDifference(arr):
     print(result)
     print(diag,diag2)
 if __name__ == '__main__':
-    os.environ['OUTPUT_PATH'] = 'junk.txt'
+    
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     n = int(input().strip())
